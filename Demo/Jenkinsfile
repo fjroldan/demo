@@ -2,20 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('test') {
+        stage('ejemplo') {
             steps {
-                sh "mvn clean compile test"
-            }
-        }
-        stage('Build') {
-            steps {
-                sh "mvn clean package"
-            }
-            post {
-                success {
-                    junit '**/target/surefire-reports/TEST-*.xml'
-                    archiveArtifacts 'target/*.jar'
-                }
+                echo "Hola"
             }
         }
     }
