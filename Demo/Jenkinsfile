@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh "mvn clean copile test"
+                sh "mvn clean compile test"
             }
             post {
                 success {
